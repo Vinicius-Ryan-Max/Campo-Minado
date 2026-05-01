@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Minesweeper Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="glass-panel">
+        <h1>Campo Minado</h1>
+        
+        <div class="controles">
+            <div class="status-group">
+                <div id="fase-display" class="status-card-mini">Fase: 1</div>
+                <input type="text" id="nome-jogador" placeholder="Seu Nome" maxlength="15">
+            </div>
+            <button id="btn-reiniciar" onclick="reiniciarJogo()">Novo Jogo 🔄</button>
+            
+            <div class="status-container">
+                <div class="status-card">
+                    <span class="icon">⏱️</span>
+                    <div id="timer">0s</div>
+                </div>
+                <div class="status-card">
+                    <span class="icon">🏆</span>
+                    <div id="score">0</div>
+                </div>
+                <div class="status-card">
+                    <span class="icon">💣</span>
+                    <div id="bomb-count">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="area-principal">
+            <div id="tabuleiro"></div>
+
+            <div id="ranking-container">
+                <h2>Melhores Pontuações</h2>
+                <div class="ranking-header">
+                    <span>Jogador</span>
+                    <span>Resultado</span>
+                </div>
+                <ul id="lista-ranking"></ul>
+                <button id="btn-limpar" onclick="limparRanking()">Limpar Ranking 🗑️</button>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
